@@ -1,0 +1,26 @@
+  <div class="panel-heading">Add new blog</div>
+  <br>
+  <label for="title" class="form-label">Title</label>
+  <br>
+  <div>
+    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="updateBlogTitle" placeholder="title">
+  </div>
+  <br>
+  <div class="form-group" name="category">
+    <label for="sell">Category</label>
+    <select class="form-control" id="sell" [(ngModel)]="updateBlogCategory">
+      <option disabled>Choose your Category</option>
+      <option>writing</option>
+      <option>Marketing</option>
+      <option>Social</option>
+      <option>News</option>
+    </select>
+  </div>
+  <label for="content" class="form-label">blog</label>
+  <div >
+    <textarea type="textarea" class="form-control" id="content" name="content" [(ngModel)]="updateBlogContent" placeholder="Enter text here.."></textarea>
+  </div>
+  <br>
+  <button *ngIf="!updateBlogId" class="btn btn-primary" (click)="addBlog(updateBlogTitle,updateBlogContent,updateBlogCategory)">Add</button>
+  <button *ngIf="updateBlogId" class="btn btn-primary" (click)="updateBlog(updateBlogTitle,updateBlogContent,updateBlogCategory)">update</button>
+  <div><br></div>

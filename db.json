@@ -1,0 +1,117 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "aditya",
+      "password": "aditya",
+      "likes": [
+        2,
+        1,
+        8,
+        7
+      ]
+    },
+    {
+      "id": 2,
+      "username": "guest",
+      "password": "guest",
+      "likes": [
+        7,
+        5,
+        10,
+        6
+      ]
+    },
+    {
+      "id": 3,
+      "username": "admin",
+      "password": "admin",
+      "likes": [
+        2
+      ]
+    },
+    {
+      "username": "amit",
+      "password": "amit",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "username": "siva",
+      "password": "siva",
+      "likes": [
+        4,
+        6,
+        5
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "title": "guest 1st",
+      "category": "writing",
+      "content": "I became aware of the fact I was on a moped at 35 mph going downhill when I crossed over the trolley tracks. My back tire got caught in the indented groove of the tracks. My moped slid along the pavement;",
+      "author": "guest",
+      "id": 4
+    },
+    {
+      "title": "4th Blog Revised",
+      "category": "Social",
+      "content": "I made it home, I left the moped in the driveway. My parents weren’t home since it was Thursday, and they were at the bar. I went to a mirror in the bathroom to inspect myself.",
+      "author": "aditya",
+      "id": 5
+    },
+    {
+      "title": "guest 2nd rev",
+      "category": "Social",
+      "content": "I was relieved. My chin was there, only crimson. I must’ve left a pretty good size chunk of flesh on the street. But most importantly my chin was there to take another fall.",
+      "author": "guest",
+      "id": 6
+    },
+    {
+      "title": "guest 3rd",
+      "category": "News",
+      "content": "A few weeks back, a forum on clean cooking was arranged in New Delhi. The forum was funded by International Organizations like UN, World Bank and USAID among others. ",
+      "author": "guest",
+      "id": 7
+    },
+    {
+      "title": "5th blog rev",
+      "category": "Social",
+      "content": "A girl came on the opposite window. She is wearing a pink crop top and a denim shorts. She has a cigarette in her hand. ",
+      "author": "aditya",
+      "id": 8
+    },
+    {
+      "title": "siva 2nd",
+      "category": "Marketing",
+      "content": "NY Attorney General Schneiderman estimated that hundreds of thousands of Americans’ identities were stolen and used in spam campaigns that support repealing net neutrality. ",
+      "author": "siva",
+      "id": 9
+    },
+    {
+      "title": "6th blog",
+      "category": "Social",
+      "content": "Given the well documented irregularities throughout the comment submission process, it was clear from the start that the data was going to be duplicative and messy.",
+      "author": "aditya",
+      "id": 10
+    }
+  ]
+}

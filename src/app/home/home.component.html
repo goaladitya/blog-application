@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Welcome {{username}}</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row" *ngIf="isDataLoaded===true">
+    <div class="panel panel-primary col-sm-2">
+      <div class="panel-heading">Categories</div>
+      <div>
+        <h4 class="list-group-item" (click)="filter(4)">writing</h4>
+        <h4 class="list-group-item" (click)="filter(5)">marketing</h4>
+        <h4 class="list-group-item" (click)="filter(6)">news</h4>
+        <h4 class="list-group-item" (click)="filter(7)">social</h4>
+      </div>
+    </div>
+    <div class="panel panel-primary col-sm-6">
+      <div class="panel-heading">
+        <button style="background: transparent; border: none" (click)="filter(1)">All blogs</button>
+        <button style="background: transparent; border: none" (click)="filter(2)">My blogs</button>
+        <button style="background: transparent; border: none" (click)="filter(3)">favourites</button>
+      </div>
+      <div *ngFor="let blog of blogs">
+          <div *ngIf="showOrNot(blog.id, blog.author, blog.category)" class="list-group-item">
+            <h4 class="list-group-item-heading col-sm-10">{{blog.title}}
+              <span *ngIf="!!(user['likes'].indexOf(blog['id'])+1)" class="glyphicon glyphicon-heart" style="color: red; " (click)="dislike(blog.id)"></span>
+              <span *ngIf="!(user['likes'].indexOf(blog['id'])+1)" class="glyphicon glyphicon-heart-empty" (click)="like(blog.id)"></span>
+            </h4>
+            <div *ngIf="blog.author===username" class="col-sm-2">
+            <button class="btn btn-primary btn-xs" (click)="updateBlogPre(blog.id)"><span class="glyphicon glyphicon-pencil"></span></button>
+            <button class="btn btn-danger btn-xs" (click)="deleteBlog(blog.id)"><span class="glyphicon glyphicon-trash"></span></button>
+            </div>
+            <br>
+            <h5 class="list-group-item-text" style="text-align: justify;">{{blog.content}}</h5>
+            <div class="row">
+            <h5 class="list-group-item-text col-sm-6" style="text-align: justify;">By: {{blog.author}}</h5>
+            <h5 class="list-group-item-text" style="text-align: justify;">category: {{blog.category}}</h5>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  <app-blogform class="panel panel-primary col-sm-4" [username]="username" [userId]="userId" [updateBlogId]="updateBlogId" [updateBlogDataParam]="updateBlogData">
+  </app-blogform>
+</div>
